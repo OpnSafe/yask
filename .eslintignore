@@ -1,0 +1,5 @@
+# Directories
+dist/
+typings/
+node_modules/
+.yarn/
