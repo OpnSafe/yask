@@ -1,0 +1,16 @@
+export default class CacheError extends Error {
+    constructor(id: number) {
+        super();
+
+        this.message = this.search(id);
+    }
+
+    private search(id: number): string {
+        switch (id) {
+            case 0: return "(yask-01) The type of the value does not correspond to the new value.";
+            case 1: return "(yask-02) Two pointers cannot have the same reference.";
+            case 2: return "(yask-03) This pointer does not exist."
+            default: return "(yask-99) Unknown error.";
+        }
+    }
+}

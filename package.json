@@ -8,9 +8,9 @@
   "scripts": {
     "lint": "eslint . --ext .ts \"./src/\" ",
     "format": "eslint . --fix --ext .ts \"./src/\" ",
-    "test": "jest ./src/tests/index.test.ts",
+    "test": "jest ./src/test/index.test.ts",
     "make": "tsc --project \"./\" ",
-    "dev": "nodemon ./src/tests/index.test.ts",
+    "dev": "nodemon ./src/test/index.test.ts",
     "docs": "jsdoc -c jsdoc.json"
   },
   "files": [
