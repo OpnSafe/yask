@@ -14,10 +14,7 @@ export default class Cache {
      * @typedef {(string | number | boolean | object | object[] | string[] | number[])} ResolvableType
      */
     /**
-     * @typedef {Predicate} PredicateType<T>
-     */
-    /**
-     * @callback Predicate
+     * @callback PredicateType<T>
      * @param {ResolvableType=} value
      * @param {number=} index
      * @param {StructureType[]} [array=]
@@ -29,7 +26,7 @@ export default class Cache {
      * @description Push value to cache
      * @returns {number}
      */
-    Push(value: ResolvableType, reference: string): number;
+    Add(value: ResolvableType, reference: string): number;
     /**
      * @public
      * @param {string} Reference - Reference to find the pointer

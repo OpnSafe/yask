@@ -8,8 +8,8 @@ describe("Test database", () =>
 	{
 		const MyCache = new Cache();
 
-        expect(MyCache.Push("Hello World!", "Test1"))
-        expect(MyCache.Push("Hi World!", "Test2"))
+        expect(MyCache.Add("Hello World!", "Test1"))
+        expect(MyCache.Add("Hi World!", "Test2"))
         
         MyCache.ForEach((x) => {
             console.log("pointer => " + x?.Pointer + "\n" + "value => " + x?.value);

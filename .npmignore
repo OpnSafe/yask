@@ -1,3 +1,9 @@
 # Directories
 src/
 docs/
+
+# Files
+.eslintignore
+.eslintrc
+tsconfig.json
+jsdoc.json

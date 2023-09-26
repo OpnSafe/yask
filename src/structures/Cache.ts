@@ -20,11 +20,7 @@ export default class Cache {
 	 */
 
 	/**
-	 * @typedef {Predicate} PredicateType<T>
-	 */
-
-	/**
-	 * @callback Predicate
+	 * @callback PredicateType<T>
 	 * @param {ResolvableType=} value
 	 * @param {number=} index
 	 * @param {StructureType[]} [array=]
@@ -37,7 +33,7 @@ export default class Cache {
 	 * @description Push value to cache
 	 * @returns {number}
 	 */
-	public Push(value: ResolvableType, reference: string): number {
+	public Add(value: ResolvableType, reference: string): number {
 		const _pointerid = uid(12);
 
 		this.ForEach((x, i) => {

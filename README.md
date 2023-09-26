@@ -14,16 +14,19 @@
 
 - 💻 Efficient and fast cache.
 - 🦋 Simple and easy to use.
+- :wrench: Yask CLI.
 
 # Important!
 > This package is in the test and debug phase, its use is recommended as long as you know what you are using, for people with no knowledge about caches its use is not recommended in this phase.
 
-# :wrench: Installation
+# :wrench: Installation & Use CLI
 
 ```
 npm i yask --save
 pnpm add yask --save
 yarn add yask --save
+
+npx yask-cli init <folder-to-init-cache>
 ```
 
 # Why use YASK
@@ -58,22 +61,22 @@ export default new Cache();
 // In another file you can import and use the cache without problem
 import MyCache from 'path/to/cache/file'
 
-MyCache.Push("Awesome yask cache", "Pointer Reference");
+MyCache.Add("Awesome yask cache", "Pointer Reference");
 ```
 #### Note:
 - **Cache:** It is not necessary to create folders or files, you can use them within the same file, it is recommended only if you want to move it throughout the project.
 ---
-> `Push`
+> `Add`
 ```ts
 /**
  * @public
- * @param {ResolvableType} value - Value to push in to cache
+ * @param {ResolvableType} value - Value to add in to cache
  * @param {string} reference - Reference to find the pointer
- * @description Push value to cache
+ * @description Add value to cache
  * @returns {number}
  */
 
-MyCache.Push("This value can be of several types", "Pointer Reference");
+MyCache.Add("This value can be of several types", "Pointer Reference");
 ```
 #### Note:
 - **Pointer Reference:** The reference of the pointer is necessary when searching for it, both in Predicates and in other methods, when doing push it is specified to create the pointer with its reference.

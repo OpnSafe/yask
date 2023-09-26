@@ -5,8 +5,8 @@ const index_1 = require("../index");
 (0, globals_1.describe)("Test database", () => {
     (0, globals_1.test)("Test all functions", async () => {
         const MyCache = new index_1.Cache();
-        (0, globals_1.expect)(MyCache.Push("Hello World!", "Test1"));
-        (0, globals_1.expect)(MyCache.Push("Hi World!", "Test2"));
+        (0, globals_1.expect)(MyCache.Add("Hello World!", "Test1"));
+        (0, globals_1.expect)(MyCache.Add("Hi World!", "Test2"));
         MyCache.ForEach((x) => {
             console.log("pointer => " + x?.Pointer + "\n" + "value => " + x?.value);
         });

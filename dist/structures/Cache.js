@@ -20,10 +20,7 @@ class Cache {
      * @typedef {(string | number | boolean | object | object[] | string[] | number[])} ResolvableType
      */
     /**
-     * @typedef {Predicate} PredicateType<T>
-     */
-    /**
-     * @callback Predicate
+     * @callback PredicateType<T>
      * @param {ResolvableType=} value
      * @param {number=} index
      * @param {StructureType[]} [array=]
@@ -35,7 +32,7 @@ class Cache {
      * @description Push value to cache
      * @returns {number}
      */
-    Push(value, reference) {
+    Add(value, reference) {
         const _pointerid = (0, uid_1.uid)(12);
         this.ForEach((x, i) => {
             if (typeof x === "undefined" || typeof i === "undefined")
